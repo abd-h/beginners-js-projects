@@ -93,5 +93,21 @@ let points = 4,
     totalPoints = points + bonusPoint
 console.log(totalPoints);
 
-// document.getElementById("coun-El").innerText = 5;
-/**/ 
+//if else statement practice
+// night club enteries
+
+    let age = 22;
+    age = 35;
+    (age <= 21)
+                    ? console.log(`Sorry you can not enter the Club`)
+                    : console.log(`Welcome`);
+    console.log(age);     
+
+    // Check if the person is elegible for birthday card from the King! (100)
+    let grandAge = 101;
+    (grandAge < 100)
+                      ? console.log(`Not Elegible`)
+                      : (grandAge === 100)
+                      ? console.log(`Here's your birthday card from the King!`)
+                      : console.log(`Not elegible you've already gotten your Card`);
+    console.log(grandAge);     
