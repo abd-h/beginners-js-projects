@@ -45,7 +45,7 @@ function startGame(){
 // Renamed  startGame to renderGame
   function renderGame() {
       // render out firstCard and secondCard  
-      cardsEl.textContent = `Cards: ${cards[0]} ${cards[1]}`;
+      cardsEl.textContent = `Cards: ${cards[0]} ${cards[1 ]}`;
       sumEl.textContent = `Sum: ${total}`
      if(total <=20) {
          message = `doyou want draw new `;
