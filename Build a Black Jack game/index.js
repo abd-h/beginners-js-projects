@@ -1,8 +1,8 @@
   
     //Building blackjack Game
-   let firstCard = 10;
-   let secondCard = 10;
-   let cards = [firstCard, secondCard]// array - ordered list of items.
+   let firstCard = 2;
+   let secondCard = 3;
+   let cards = [firstCard, secondCard]// Creating cards array - ordered list of items.
     let total = firstCard + secondCard;
 
     // Add the hasBlackJack variable
@@ -45,10 +45,17 @@ function startGame(){
 // Renamed  startGame to renderGame
   function renderGame() {
       // render out firstCard and secondCard  
-      cardsEl.textContent = `Cards: ${cards[0]} ${cards[1 ]}`;
+    //    cardsEl.textContent = `Cards: ${cards[0]} ${cards[1 ]}`;
+       // Creating  a for loop that renders out all
+       //cards instead of  just two;
+       cardsEl.textContent = "Cards: ";
+       for (let i = 0; i < cards.length; i++){
+            
+            cardsEl.textContent += cards[i] + " ";
+       }
       sumEl.textContent = `Sum: ${total}`
      if(total <=20) {
-         message = `doyou want draw new `;
+         message = `do you want draw new card from the deck `;
      }
      else if (total === 21) {
          message =`congratulations`;
@@ -66,10 +73,13 @@ function startGame(){
   function newCard(){
       console.log("Drawing a new card from the deck");
       //add to the sum when newCard is clicked
-      let thirdCard = 1  ;
+      let thirdCard = 4;
       total += thirdCard;
       renderGame();
+      cards.push(thirdCard);
+      console.log(cards);
   }
+
 
 
 /* (total <= 20)? message = `Want to play around ?`

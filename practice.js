@@ -121,4 +121,90 @@ console.log(totalPoints);
     console.log(11 <= 11); // true
     console.log(3 <= 2);// false
 
-    // Intro to arrays
+    // Intro to arrays 
+     let fearturdPost = [
+         "Check my Netflix clone",
+         "Here's the code for my projects",
+         "I've just relaunched my projects"
+     ];
+
+     // chellenge
+     // Create an array that lists experiece,   education and skills.
+     // The items of array should be strings
+
+     let cv = ["Oldfields School", "Customer Relations Manager", "AAT license" ];
+     console.log(cv[1]);
+     console.log(cv[2]);
+     console.log(cv[0 ]);
+
+
+     // Arrays with multiple data types
+    let messages = [
+        "Hey, how's it going",
+        "I'm great, thanks! How about you?",
+        "all good. been working on my portofolio lately."
+     ];
+     let newMessage = "Same Here!";
+     messages .push(newMessage);
+     console.log(messages);
+     messages.pop();
+     console.log(messages);
+
+//...........................................     
+    
+// Count to ten!
+
+// We need to specify...
+
+// Where do we need to START counting?
+//Where is the FINISH line?
+//What is the STEP SIZE we should take?
+
+//       START             FINISH        STEP SIZE
+for ( let count = 1;    count < 11;    count++) {
+    console.log(count); 
+}
+
+//       START             FINISH        STEP SIZE
+for ( let count = 10;    count <= 20;    count++) {
+    console.log(count); 
+}
+
+//Count from 0 to 5;
+for (let i = 0; i <=5; i++){
+    console.log(i);
+}
+
+// Count from 10 to 100 in steps of 10
+for (let i =10; i <= 100; i += 10){
+    console.log(i);
+}
+
+// Writing array based for loops
+let firstMessage = [
+        "Hey, how's it going",
+        "I'm great, thanks! How about you?",
+        "all good. been working on my portofolio lately.",
+        "Same here",
+        "gr"
+     ];
+
+     for (let i = 0; i < firstMessage.length; i++){
+         console.log(firstMessage[i]);
+     }
+
+     let cardsArray = [7, 3, 9];
+     for (let i = 0; i < cards.length; i++ ){
+         console.log(cardsArray[i]);
+     }
+
+     /*
+     Rendering the sentence in the greetingEl 
+     paragraph using a for loopand.textContent */
+
+     let sentence = ["Hello", "my name", "is", "Thomas Tuchal"];
+
+     let greetingEl = document.getElementById("greeting-el");
+     for (let i = 0; i < sentence.length; i++){
+        greetingEl.textContent += sentence[i]+ " " ;
+     }
