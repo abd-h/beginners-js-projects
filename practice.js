@@ -194,7 +194,7 @@ let firstMessage = [
      }
 
      let cardsArray = [7, 3, 9];
-     for (let i = 0; i < cards.length; i++ ){
+     for (let i = 0; i < cardsArray.length; i++ ){
          console.log(cardsArray[i]);
      }
 
@@ -208,3 +208,40 @@ let firstMessage = [
      for (let i = 0; i < sentence.length; i++){
         greetingEl.textContent += sentence[i]+ " " ;
      }
+
+     // Crate a function, getRandomCard().
+     // that always returns the number 5;
+
+  
+
+     // Returning Values in functions
+
+     let player1Time = 102;
+     let player2Time = 107 ;
+function getFastersRaceTime(){
+    if(player1Time < player2Time) {
+        return player1Time;
+    }
+    else if(player2Time < player1Time){
+        return player2Time;
+    }
+    else {
+        return player2Time; 
+    }
+}
+let fastersRace = getFastersRaceTime();
+console.log(fastersRace);
+
+function getTotalRaceTime(){
+    let total = player1Time + player2Time;
+    return total;
+}
+let totalRaceTime = getTotalRaceTime();
+console.log(totalRaceTime);
+
+// Generating random numbers with Math.Random;
+let randomNumber = Math.random();
+console.log(randomNumber);
+// random numbers between 0 and 1 but not 1
+let mathfloor = Math.floor(3.45632);
+console.log(mathfloor);

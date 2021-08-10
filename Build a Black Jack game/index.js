@@ -1,7 +1,7 @@
   
     //Building blackjack Game
-   let firstCard = 2;
-   let secondCard = 3;
+   let firstCard = getRandomCard();
+   let secondCard = getRandomCard();
    let cards = [firstCard, secondCard]// Creating cards array - ordered list of items.
     let total = firstCard + secondCard;
 
@@ -42,6 +42,11 @@ function startGame(){
     renderGame();
 }
 
+function getRandomCard() {
+    return Math.floor(Math.random() *);
+}
+
+
 // Renamed  startGame to renderGame
   function renderGame() {
       // render out firstCard and secondCard  
@@ -73,7 +78,7 @@ function startGame(){
   function newCard(){
       console.log("Drawing a new card from the deck");
       //add to the sum when newCard is clicked
-      let thirdCard = 4;
+      let thirdCard = getRandomCard();
       total += thirdCard;
       renderGame();
       cards.push(thirdCard);
