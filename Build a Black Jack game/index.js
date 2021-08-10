@@ -43,7 +43,7 @@ function startGame(){
 }
 
 function getRandomCard() {
-    return Math.floor(Math.random() *);
+    return Math.floor(Math.random() *6);
 }
 
 
