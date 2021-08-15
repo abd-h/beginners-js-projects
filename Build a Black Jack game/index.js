@@ -1,49 +1,56 @@
-  
     //Building blackjack Game
-   let firstCard = getRandomCard();
-   let secondCard = getRandomCard();
-   let cards = [firstCard, secondCard]// Creating cards array - ordered list of items.
-    let total = firstCard + secondCard;
-
-    // Add the hasBlackJack variable
+   
+   let cards = []
+    let total = 0;
     let hasBlackJack = false;
-
     //added isAlive
-    let isAlive = true;
-
+    let isAlive = false;
     //Adding the message variable
     let message = "";
-
     // Created message Variable for displaying message
     let messageEl = document.getElementById("message-el");
-
     // Created sumEl for displaying sum by using querySelector
     //let sumEl = document.querySelector("#sum-el")
-
     // Created sumEl for displaying sum
     let sumEl = document.getElementById("sum-el")
-
     //Created cardsEl variable for displaying cards tally
     let cardsEl = document.getElementById("cards-el");
 
-    
+    // let playerName = "Norman";
+    // let playerChips = 145;
 
+    let player = {
+        player: "Norman",
+        chips: 145
+    };
 
-    // (total <= 20)? message = `Want to play a round ?`
-    // :(total === 21)? (message += `Congratulations 😎`,hasBlackJack  = true)
-    // : (message += `Game is Over`, isAlive = false);
-    console.log(total);
-    console.log(hasBlackJack);
-    console.log(isAlive);
-    console.log(message);
+    let playerEl = document.getElementById("player-el");
+    playerEl.textContent = `${player.name} $${player.chips}`
 
+ 
+    console.log(cards);
     // Creating startGame function for the Start Game button
 function startGame(){
+    isAlive = true;
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    total = firstCard + secondCard;
+
     renderGame();
 }
 
 function getRandomCard() {
-    return Math.floor(Math.random() *6);
+    let randomNumber = Math.floor(Math.random() *13) + 1;
+    if(randomNumber > 10) {
+        return 10;
+    }
+    else if (randomNumber === 1){
+        return 11;
+    }
+    else {
+        return randomNumber;
+    }
 }
 
 
@@ -68,7 +75,7 @@ function getRandomCard() {
      }
      else{
          message = `Game is Over`;
-         isAlive = false
+         isAlive = false;
      }
 
     messageEl.textContent = message;
@@ -77,12 +84,15 @@ function getRandomCard() {
   //New card function
   function newCard(){
       console.log("Drawing a new card from the deck");
-      //add to the sum when newCard is clicked
-      let thirdCard = getRandomCard();
-      total += thirdCard;
-      renderGame();
-      cards.push(thirdCard);
-      console.log(cards);
+      if (isAlive === true && hasBlackJack === false){
+             //add to the sum when newCard is clicked
+            let thirdCard = getRandomCard();
+            total += thirdCard;
+            cards.push(thirdCard);
+             renderGame();
+           
+      }
+     
   }
 
 

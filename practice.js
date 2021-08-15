@@ -245,3 +245,31 @@ console.log(randomNumber);
 // random numbers between 0 and 1 but not 1
 let mathfloor = Math.floor(3.45632);
 console.log(mathfloor);
+
+// completing dice function
+function dice() {
+   let randomNumber = Math.floor( Math.random() * 6) + 1;
+   return randomNumber;
+}
+console.log(dice());
+
+//Logical operators;
+let hasSolvedChallange =    false;
+let hasHintsLeft = false;
+if(hasSolvedChallange === false && hasHintsLeft  === false){
+   showSolution()
+}
+
+function showSolution(){
+    console.log("Show Solution......");
+}    
+
+let likesDocumentries = true;
+let likesStartups = false;
+if(likesDocumentries === true || likesStartups) {
+    recomendedMovies()
+}
+
+function recomendedMovies() {
+    console.log("Hey, check this new filmwe thinkyou will like");
+}
