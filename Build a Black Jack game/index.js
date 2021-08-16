@@ -1,5 +1,16 @@
-    //Building blackjack Game
-   
+    /*
+    1.  Arrays                    6.  logical operators
+    2.  Objects                  7.  for loops
+    3.  Boolean                 8. The Maths object
+    4. if/else statment       9. return statement 
+    5.  comparison operaters
+    */
+   // Building blackjack Game
+   let player = {
+        name: "Norman",
+        chips: 145
+    };
+
    let cards = []
     let total = 0;
     let hasBlackJack = false;
@@ -19,13 +30,9 @@
     // let playerName = "Norman";
     // let playerChips = 145;
 
-    let player = {
-        player: "Norman",
-        chips: 145
-    };
-
+    
     let playerEl = document.getElementById("player-el");
-    playerEl.textContent = `${player.name} $${player.chips}`
+    playerEl.textContent = `${player.name}: $${player.chips}`
 
  
     console.log(cards);
