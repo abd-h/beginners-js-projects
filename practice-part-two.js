@@ -57,3 +57,37 @@ let age1 = 75
           age1 = "Senior Citizen";
     }
 console.log(age1);
+
+// loops and arrays
+let largeContries = ["China", "India", "USA", "Indonesia", "Pakistan"];
+let p = "The 5 largest countries in the world";
+console.log(p);
+for(let i = 0; i < largeContries.length; i++){
+    console.log(" " + "  - "  +  largeContries[i]);
+}
+
+//push, pop, shift, unshift
+
+let largerstCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monoco"]
+
+largerstCountries.pop();
+largerstCountries.shift();
+largerstCountries.unshift("China");
+largerstCountries.push("Pakistan");
+console.log(largerstCountries);
+
+//  logical operator
+let dayOfTheMonth = 13;
+let day = "Thursday";
+if (day === "Thursday" && dayOfTheMonth === 13){
+    console.log("😱"); 
+}
+
+// Rock paper scissors
+let hands = ["rock", "paper", "scissor"];
+function getHand(){
+    let randomIndex = Math.floor(Math.random() * 3);
+    return hands[randomIndex]
+}
+console.log(getHand());
+
