@@ -91,3 +91,13 @@ function getHand(){
 }
 console.log(getHand());
 
+// if possible, use const. If not, use let.
+
+const bestPrice = 520;
+const discount = 120;
+let shippingCost = 15;
+let shippingTime = "5 - 12 days";
+const fullPrice = (bestPrice - discount) +  shippingCost;
+
+console.log("Total cost: " + fullPrice+ " It will arrive in " + shippingTime);
+

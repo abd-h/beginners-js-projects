@@ -4,6 +4,8 @@
 
 ## Rendering error message
 
-## very Basic Calculator challenge
+## Very Basic Calculator challenge
 
-## build a Blackjack Game Challenge
+## Build a Blackjack Game Challenge
+
+## Build Chrome Extension
