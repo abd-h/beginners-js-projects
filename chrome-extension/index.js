@@ -1,28 +1,41 @@
 // Creating myLeads array and inputEl
-let myLeads = ["www.awsomeleads.com", "www.epicleed.com", "www.greatlead.com", 1];
+let myLeads = [];
 const inputEl= document.getElementById("input-el");
 let inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
-// inputButton.addEventListener("click", function(){
-//     console.log("Button clicked");
-// })
- 
-// first addEventListener
-let box = document.getElementById("box");
-box.addEventListener("click", function() {
-    console.log("I want to open the box!");
-})
 
-inputBtn.addEventListener("click",  function() {
+inputBtn.addEventListener( "click",  function() {
     myLeads.push(inputEl.value)
-    console.log(myLeads);
+    inputEl.value = "";
+    renderLeads();
+ 
+    });
+
+    // 1. wrapping the code below in a renderLeads()  function
     
-    
-    })
-    
-for (let i = 0; i <myLeads.length; i++) {
-        ulEl.innerHTML +=  "<li>" +myLeads[i] + "</li>";
+    function renderLeads() {
+        let listItems = "";
+        for(let i = 0; i < myLeads.length; i++) {
+         
+            listItems += `
+            <li>
+                <a href="https://www.bbc.co.uk/sport" target="_blank">${myLeads[i]}</a>
+            </li>` 
         }
+        ulEl.innerHTML = listItems;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
 
         // Buy button
         const container = document.getElementById("container")
