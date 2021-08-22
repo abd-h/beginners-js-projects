@@ -19,7 +19,7 @@ inputBtn.addEventListener( "click",  function() {
          
             listItems += `
             <li>
-                <a href="https://www.bbc.co.uk/sport" target="_blank">${myLeads[i]}</a>
+                <a href="${myLeads[i]}" target="_blank">${myLeads[i]}</a>
             </li>` 
         }
         ulEl.innerHTML = listItems;

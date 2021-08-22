@@ -11,3 +11,14 @@
     //    li.textContent = myLeads[i];
     //    ulEl.append(li);
     //     }
+
+    // Template string
+    const recepient = "James",
+    sender = "Robert Dinero"
+    const email = "Hi " + recepient + " how is it going? Cheers Per ";
+
+    console.log(email);
+
+    let nEmail = `Hi ${recepient} 
+                        How is it going? cheers ${sender}`;
+    console.log(nEmail);
