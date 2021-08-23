@@ -46,3 +46,27 @@ console.log(myLeads2);
 // arrays stringfied;
 myLeads2 = myLeads2.toString(myLeads2);
 console.log(typeof myLeads2);
+
+//...........................................
+
+// truthy and falsy values
+
+const credits = 0;
+
+if ("s") {
+    console.log("lets play 🤡");
+}
+else {
+    console.log("Sorry you have no credit 😩");
+}
+//..........................................................
+
+//guess the expression - truthy or falsy
+
+console.log( Boolean("") ) // falsy;
+console.log( Boolean("0") ) // truthy;
+console.log( Boolean(100) ) // truthy ;
+console.log( Boolean(null) ) //falsy ;
+console.log( Boolean([0]) ) // truth ;
+console.log( Boolean(-0) ) // falsy;
+

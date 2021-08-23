@@ -2,17 +2,23 @@ let myLeads = [];
 const inputEl= document.getElementById("input-el");
 let inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
-localStorage.setItem("myLeads",  "www.awsomeleads.com");
-localStorage.getItem("myLeads")
-console.log(localStorage.getItem("myLeads") );
-localStorage.clear("myLeads")
+
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+console.log(leadsFromLocalStorage);
+if (leadsFromLocalStorage){
+    myLeads = leadsFromLocalStorage;
+
+    renderLeads()
+}
+
+console.log(leadsFromLocalStorage);
+
+
 
 inputBtn.addEventListener( "click",  function() {
     myLeads.push(inputEl.value)
     inputEl.value = "";
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    
-    
     renderLeads();
     console.log(localStorage.getItem("myLeads"));
     });
