@@ -70,3 +70,21 @@ console.log( Boolean(null) ) //falsy ;
 console.log( Boolean([0]) ) // truth ;
 console.log( Boolean(-0) ) // falsy;
 
+tabBtn.addEventListener("click", () => {
+    localStorage.setItem("tabs[0].url", JSON.stringify(tabs[0].url));
+    myLeads.push(ulEl.value);
+    saveBtn();
+    console.log(tabs);
+})
+
+
+function saveBtn(){
+    let listItems = "";
+    listItems += 
+            `
+            <li>
+            <a href = ${tabs[0].url} target=_blank> ${tabs[0].url}</a>
+            </li>
+            `
+            ulEl.innerHTML = listItems
+}
