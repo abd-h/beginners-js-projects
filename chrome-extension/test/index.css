@@ -1,0 +1,28 @@
+
+.container {
+    margin: auto;
+   /* width: 800px; */
+   /* height: 400px; */
+    /* background-color: violet; */
+    display: flex;
+    justify-content: center;
+}
+.h2 {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: 5px;
+    
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.team-img{
+    display: block;
+    width: 100px;
+    border-radius: 100%;
+    margin: 10px;
+    padding: 5px 20px;
+}
